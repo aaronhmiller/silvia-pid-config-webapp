@@ -7,8 +7,8 @@ Allows config via a web app as well as OTA updates for changes to web app code
    SSID="<YOUR_SSID_HERE>"
    PASSWORD="<YOUR_PASSWORD_HERE>"
    ```
-3. update the `firmware_url` to the repo url of your fork
-4. if you wish to run off battery, set the `WIFI_START_HOUR` and `WIFI_END_HOUR` to limit the time the radio runs.
+3. in `main.py` update the `firmware_url` to the repo url of your fork
+4. also, in the same file, if you wish to run off battery, set the `WIFI_START_HOUR` and `WIFI_END_HOUR` to limit the time the radio runs.
 
 Then, you'll need to load:
 ```
