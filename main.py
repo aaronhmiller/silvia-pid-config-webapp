@@ -39,7 +39,7 @@ from machine import UART, Pin, RTC, Timer
 from ota import OTAUpdater
 from WIFI_CONFIG import SSID, PASSWORD
 firmware_url = "https://raw.githubusercontent.com/aaronhmiller/silvia-pid-config-webapp/"
-ota_updater = OTAUpdater(SSID, PASSWORD, firmware_url, "time-based-web-bridge.py")
+ota_updater = OTAUpdater(SSID, PASSWORD, firmware_url, "main.py")
 ota_updater.download_and_install_update_if_available()
 
 # ============ CONFIGURATION ============
