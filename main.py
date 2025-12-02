@@ -23,7 +23,7 @@ Valid Commands:
 - heater off
 
 Installation:
-1. Adjust WIFI_SSID and WIFI_PASSWORD for your network
+1. Adjust SSID and PASSWORD in separate WIFI_CONFIG.py for your network
 1. Adjust WIFI_START_HOUR and WIFI_END_HOUR (saves on battery life)
 2. Upload: mpremote connect /dev/cu.usbmodem101 fs cp main.py :main.py
 3. Reset device (unplug/replug USB-C)
@@ -46,7 +46,7 @@ ota_updater.download_and_install_update_if_available()
 WIFI_SSID = SSID
 WIFI_PASSWORD = PASSWORD
 WIFI_START_HOUR = 6    # Start hour (24-hour format)
-WIFI_END_HOUR = 9     # End hour (24-hour format)
+WIFI_END_HOUR = 12     # End hour (24-hour format)
 BASE_TIMEZONE_OFFSET = -8  # PST base offset (UTC-8)
 UART_BAUDRATE = 115200
 BUILTIN_LED = 15       # Yellow user LED on XIAO ESP32C6
