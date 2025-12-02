@@ -45,7 +45,7 @@ ota_updater.download_and_install_update_if_available()
 # ============ CONFIGURATION ============
 WIFI_SSID = SSID
 WIFI_PASSWORD = PASSWORD
-WIFI_START_HOUR = 5    # Start hour (24-hour format)
+WIFI_START_HOUR = 6    # Start hour (24-hour format)
 WIFI_END_HOUR = 8     # End hour (24-hour format)
 BASE_TIMEZONE_OFFSET = -8  # PST base offset (UTC-8)
 UART_BAUDRATE = 115200
