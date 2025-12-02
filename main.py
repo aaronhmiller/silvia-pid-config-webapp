@@ -791,7 +791,7 @@ def web_server_scheduled():
         print(f"Web server (with pulse) running on http://{wlan.ifconfig()[0]}")
         print(f"Will shut down automatically at {WIFI_END_HOUR:02d}:00")
         print(f"{'='*60}\n")
-        led_timer.init(freq=1, mode=Timer.PERIODIC, callback=pulse)
+        led_timer.init(freq=20, mode=Timer.PERIODIC, callback=pulse)
 
         while True:
             cl = None
