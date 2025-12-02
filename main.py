@@ -1,5 +1,5 @@
 """
-ESP32 Coffee Controller with Time-Based WiFi - STANDALONE FIXED VERSION v0.9.4
+ESP32 Coffee Controller with Time-Based WiFi - STANDALONE FIXED VERSION v0.9.5
 Fixed for reliable standalone operation without Thonny connection
 
 Key Fixes for Standalone Operation:
@@ -13,6 +13,7 @@ Key Fixes for Standalone Operation:
 8. Filtered command responses to exclude DataLogger CSV output (v0.9.2)
 9. Fixed response timing - reduced sleep from 0.5s to 0.05s to capture CLI responses (v0.9.3)
 10. Fixed race condition - clear UART buffer before sending, only break on <<OK/<<ERROR (v0.9.4)
+11. Added OTA capability (v0.9.5)
 
 Valid Commands:
 - reg coffee [temp]  (defaults to 108°C)
@@ -45,8 +46,8 @@ ota_updater.download_and_install_update_if_available()
 # ============ CONFIGURATION ============
 WIFI_SSID = SSID
 WIFI_PASSWORD = PASSWORD
-WIFI_START_HOUR = 6    # Start hour (24-hour format)
-WIFI_END_HOUR = 12     # End hour (24-hour format)
+WIFI_START_HOUR = 5    # Start hour (24-hour format)
+WIFI_END_HOUR = 8      # End hour (24-hour format)
 BASE_TIMEZONE_OFFSET = -8  # PST base offset (UTC-8)
 UART_BAUDRATE = 115200
 BUILTIN_LED = 15       # Yellow user LED on XIAO ESP32C6
@@ -718,7 +719,7 @@ HTML = """<!DOCTYPE html>
         </div>
         
         <div class="footer">
-            ESP32-C6 Coffee Controller v0.9.4
+            ESP32-C6 Coffee Controller v0.9.5
         </div>
     </div>
     
@@ -932,7 +933,7 @@ def main():
     print("Hardware ready!")
     
     print("\n" + "="*60)
-    print("Coffee Controller with Scheduled WiFi v0.9.4 (ESP32C6 FIX)")
+    print("Coffee Controller with Scheduled WiFi v0.9.5 (ESP32C6 FIX)")
     print("="*60)
     print(f"WiFi Schedule: {WIFI_START_HOUR:02d}:00 - {WIFI_END_HOUR:02d}:00 (local time)")
     print(f"Base Timezone: UTC{BASE_TIMEZONE_OFFSET:+d} (PST)")
