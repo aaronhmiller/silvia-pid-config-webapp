@@ -984,12 +984,12 @@ def main():
     elif time_synced:
         # Not in WiFi hours, disconnect to save power
         disconnect_wifi()
-        print(f"Not in WiFi hours yet. Next check in 60 seconds...")
+        print(f"Not in WiFi hours yet. Next check in 5 minutes...")
     
     # Main monitoring loop
     last_check = time.time()
     last_time_sync = time.time()
-    check_interval = 60  # Check every 1 minute
+    check_interval = 300  # Check every 5 minutes
     time_sync_interval = 3600  # Resync time every hour
     wifi_active = wlan.isconnected()
     
